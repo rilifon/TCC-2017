@@ -9,22 +9,21 @@
 \contentsline {chapter}{\numberline {3}Proposta}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Tem\IeC {\'a}tica}{5}{section.3.1}
 \contentsline {section}{\numberline {3.2}Mec\IeC {\^a}nicas}{5}{section.3.2}
-\contentsline {section}{\numberline {3.3}Gameplay}{5}{section.3.3}
-\contentsline {section}{\numberline {3.4}Recursos \IeC {\'A}udio Visuais}{5}{section.3.4}
-\contentsline {chapter}{\numberline {4}Desenvolvimento}{7}{chapter.4}
-\contentsline {section}{\numberline {4.1}PsyChObALL}{7}{section.4.1}
-\contentsline {section}{\numberline {4.2}STEAMING}{7}{section.4.2}
-\contentsline {section}{\numberline {4.3}Gerenciador de Saves}{7}{section.4.3}
-\contentsline {section}{\numberline {4.4}Script de Fases}{7}{section.4.4}
-\contentsline {section}{\numberline {4.5}Shaders}{7}{section.4.5}
-\contentsline {section}{\numberline {4.6}Juiceness}{7}{section.4.6}
-\contentsline {section}{\numberline {4.7}Problemas e Desafios}{7}{section.4.7}
-\contentsline {chapter}{\numberline {5}Resultados}{9}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conte\IeC {\'u}do}{9}{section.5.1}
-\contentsline {section}{\numberline {5.2}Eventos}{9}{section.5.2}
-\contentsline {section}{\numberline {5.3}Como Jogar}{9}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{11}{chapter.6}
-\contentsline {section}{\numberline {6.1}Mat\IeC {\'e}rias Utilizadas}{11}{section.6.1}
-\contentsline {section}{\numberline {6.2}Trabalhos Futuros}{11}{section.6.2}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{13}{appendix*.4}
+\contentsline {section}{\numberline {3.3}Gameplay}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Recursos Audiovisuais}{7}{section.3.4}
+\contentsline {chapter}{\numberline {4}Desenvolvimento}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}PsyChObALL}{9}{section.4.1}
+\contentsline {section}{\numberline {4.2}STEAMING}{9}{section.4.2}
+\contentsline {section}{\numberline {4.3}Gerenciador de Saves}{9}{section.4.3}
+\contentsline {section}{\numberline {4.4}Script de Fases}{9}{section.4.4}
+\contentsline {section}{\numberline {4.5}Shaders}{9}{section.4.5}
+\contentsline {section}{\numberline {4.6}Juiceness}{9}{section.4.6}
+\contentsline {section}{\numberline {4.7}Problemas e Desafios}{9}{section.4.7}
+\contentsline {chapter}{\numberline {5}Resultados}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conte\IeC {\'u}do}{11}{section.5.1}
+\contentsline {section}{\numberline {5.2}Eventos}{11}{section.5.2}
+\contentsline {section}{\numberline {5.3}Como Jogar}{11}{section.5.3}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}Mat\IeC {\'e}rias Utilizadas}{13}{section.6.1}
+\contentsline {section}{\numberline {6.2}Trabalhos Futuros}{13}{section.6.2}
 \contentsfinish 
