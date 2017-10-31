@@ -20,10 +20,10 @@
 \contentsline {section}{\numberline {4.6}Problemas e Desafios}{11}{section.4.6}
 \contentsline {chapter}{\numberline {5}Resultados}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Conte\IeC {\'u}do}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}Eventos}{13}{section.5.2}
-\contentsline {section}{\numberline {5.3}Como Jogar}{13}{section.5.3}
+\contentsline {section}{\numberline {5.2}Eventos}{14}{section.5.2}
+\contentsline {section}{\numberline {5.3}Como Jogar}{14}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{15}{chapter.6}
 \contentsline {section}{\numberline {6.1}Mat\IeC {\'e}rias Utilizadas}{15}{section.6.1}
 \contentsline {section}{\numberline {6.2}Trabalhos Futuros}{15}{section.6.2}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{17}{appendix*.4}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{17}{appendix*.6}
 \contentsfinish 
