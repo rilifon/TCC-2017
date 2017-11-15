@@ -12,13 +12,47 @@
 \label{cap:conceitos_tecnicas_e_ferramentas}
 % ---------------------------------------------------------------------------- %
 
-Textotextotextotexto
+Assim como no processo de desenvolver um software, um jogo possui vários conceitos e ferramentas próprias que ajudam na comunicação e organização durante o desenvolvimento.
+Para familiarizar o leitor com as técnicas e jargões normalmente utilizados, vamos descrever nesse capítulo um pouco da linguagem específica no mundo de \textit{game development}, além das técnicas e ferramentas específicas que foram utilizadas na criação de \textit{PsyChO: The Ball}.
 
 % ---------------------------------------------------------------------------- %
 \section{Conceitos}
 \label{sec:conceitos}
+  A interatividade de um jogo consiste em que ações um usuário pode realizar, e de que forma isso altera o estado atual do jogo. Essa dinâmica define a jogabilidade de um jogo virtual, também chamada de \textit{gameplay}. Os tipos de interações que o jogador tem acesso são denomidas as \textit{mecânicas} do jogo, e estas variam dependendo de qual experiência você deseja transmitir para o usuário.
 
-    Texto texto texto
+  Por exemplo em jogos de plataforma 2D clássicos como \textit{Mario} você controla um personagem que precisa pular e atravessar obstáculos até terminar o jogo. Para isso o jogador pode correr e pular, estas sendo as mecânicas fornecidas ao jogador para enfrentar os desafios propostos. Essas mecânicas juntas ao \textit{feedback} que o jogo retorna vão gerar uma \textit{experiência} para o jogador, e em geral toda a criação de jogos gira em torno de criar uma certa experiência desejada (como diversão, emoção, medo, aprendizado, etc).
+
+  Existe uma área de estudo sobre a criação de experiências em jogos: \textit{Game Design}. Game Designer Jesse Schell define Game Design em seu livro sobre o assunto \cite{jessegamedesign} da seguinte forma:
+
+  \begin{displayquote}
+    \textit{Game Design é o ato de decidir como um jogo deve ser.}
+  \end{displayquote}
+
+   É natural esperar que essa área não seja uma ciência exata, de forma que não existe algoritmos ou fórmulas matemáticas que definem exatamente como fazer um jogo "bom". Muito pelo contrário, o estudo na área de Game Design é um conjunto de ideias e linhas de pensamento para auxiliar no desenvolvimento de jogos e mais facilmente atingir a experiência desejada que o desenvolvedor quer transmitir. Também no mesmo livro de Schell \cite{jessegamedesign} ele cria um sistema de "lentes", cada uma representanado alguma visão ou crítica para analisar as mecânicas e funcionalidades de um jogo e averiguar a consistência entre experiência desejada e transmitida.
+
+  Como temos esse objetivo final de \textit{experiência para o usuário}, é muito comum a utilização de documentos para formalmente específicar e detalhar como será o desenvolvimento do jogo. Um documento famoso desse tipo é o \textit{Game Design Document} ou \textit{GDD}. Seu objetivo é servir como uma "receita de bolo", determinando o gênero do jogo, suas mecânicas, detalhamentos de personagens ou roteiro da história, ou até uma breve descrição do que é seu jogo, de forma que todos que trabalhem no projeto possam facilmente consultar e utilizar como guia durante o desenvolvimento. Em seu livro de Fundamentos em Game Design \cite{ernestgamedesign}, Ernest Adams descreve Game Design Documents da seguinte forma:
+
+  \begin{displayquote}
+    \textit{Os documentos gravam decisões feitas and concordadas oralmente [entre os integrantes do grupo]; (...) mais importante que isso, eles transformam ideias vagas em planos explícitos}
+  \end{displayquote}
+
+  Desta forma, apesar de parecer um gasto adicional de tempo sem grandes benefícios, a manutenção de documentos de design acaba poupando tempo em resolução de conflitos de ideias e deixa o desenvolvimento de um jogo muito mais fluído.\\
+
+  Na parte prática de desenvolvimento vamos precisar de ferramentas para produzir e gerar o jogo. Estas são chamdas de \textit{Motores de Jogos} ou \textit{Game Engines}. Uma \textit{Game Engine} consiste em várias bibliotecas que auxiliam na produção de um jogo, além de alguma estruturação para gerenciar e manipular elementos lógicos. Elas possuem métodos para desenhar objetos na tela, reproduzir arquivos de sons, lidar com input de usuário e em muitos casos outras funcionalidades úteis como métodos para simular interações físicas ou gerenciar janelas. Uma versão mais simples de uma \textit{Game Engine} é uma \textit{Framework} ou \textit{Arcabouço}. Estas são um conjunto de bibliotecas mas geralmente mais abertas  e sem uma estrutura rígida para desenvolver o jogo.
+
+  Mas seja uma Game Engine ou um Arcabouço, todas ferramentas para criação de jogos utilizam um laço lógico chamado de \textit{Game Loop}. Cada ferramenta tem sua própria versão e implementação, mas em geral todas tem 3 pontos chaves: processar inputs, atualizar objetos no jogo e renderizar elementos gráficos. Podemos visualizar esse laço da seguinte forma, como visto no segundo capítulo do livro de Robert Nystrom, Game Programming Patterns \cite{robertgameloop}:
+
+  \begin{lstlisting}
+    while (true)
+    {
+      processInput();
+      update();
+      render();
+    }
+  \end{lstlisting}
+
+  A função textit{processInput} é responsável por verificar se o usuário apertou alguma tecla ou de algum jeito fez algo no mundo físico que afete o jogo. A função \textit{update} é responsável pela parte lógica do jogo, como atualizar as posições de inimigos, determinar colisões e qualquer outra atualização lógica necessária. É muito comum que essa função receba um argumento especial que diz quanto tempo se passou desde a últiam chamada dela (muitas vezes chamado de \textit{dt}). Assim é possível fazer cálculos relativos ao tempo de forma mais realística. Por último a função \textit{render} é responsável por desenhar os objetos na tela, normalmente apagando o que foi desenhado anteriormente.
+
 
 % ---------------------------------------------------------------------------- %
 \section{Técnicas}

@@ -94,6 +94,9 @@
 % Citação bibliográfica alpha (alpha-ime.bst).
 \RequirePackage[square,sort,nonamebreak,comma]{natbib}
 
+% Para citações
+\RequirePackage{csquotes}
+
 \RequirePackage{ifthen}
 \RequirePackage{etoolbox}
 \RequirePackage{color}
