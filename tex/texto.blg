@@ -6,45 +6,45 @@ Database file #1: bibliografia.bib
 Warning--empty publisher in ernestgamedesign
 Warning--empty publisher in robertgameloop
 Warning--empty publisher in jessegamedesign
-You've used 3 entries,
+You've used 4 entries,
             2543 wiz_defined-function locations,
-            571 strings with 4691 characters,
-and the built_in function-call counts, 863 in all, are:
-= -- 72
-> -- 24
-< -- 3
-+ -- 7
-- -- 6
-* -- 53
-:= -- 151
-add.period$ -- 9
-call.type$ -- 3
-change.case$ -- 15
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 48
-empty$ -- 76
-format.name$ -- 12
-if$ -- 170
+            577 strings with 4814 characters,
+and the built_in function-call counts, 1130 in all, are:
+= -- 98
+> -- 32
+< -- 4
++ -- 9
+- -- 8
+* -- 64
+:= -- 193
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 20
+chr.to.int$ -- 4
+cite$ -- 7
+duplicate$ -- 59
+empty$ -- 101
+format.name$ -- 16
+if$ -- 227
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 6
-newline$ -- 18
-num.names$ -- 9
-pop$ -- 27
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 36
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 24
 quote$ -- 0
-skip$ -- 29
+skip$ -- 40
 stack$ -- 0
-substring$ -- 22
-swap$ -- 3
-text.length$ -- 3
-text.prefix$ -- 3
+substring$ -- 29
+swap$ -- 4
+text.length$ -- 4
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 12
+type$ -- 20
 warning$ -- 3
-while$ -- 6
-width$ -- 6
-write$ -- 38
+while$ -- 8
+width$ -- 7
+write$ -- 50
 (There were 3 warnings)

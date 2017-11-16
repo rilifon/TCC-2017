@@ -3,16 +3,21 @@
 \bibitem[Ada10]{ernestgamedesign}
 Ernest Adams.
 \newblock {\em Fundamentals of Game Design}.
-\newblock 2 edi\c{c}\~{a}o, 2010.
+\newblock Segunda edi\c{c}\~{a}o, 2010.
+
+\bibitem[Ber14]{kleberkanban}
+Kleber Bernardo.
+\newblock Kanban: Do início ao fim!
+\newblock https://www.culturaagil.com.br/kanban-do-inicio-ao-fim/, 2014.
 
 \bibitem[Nys14]{robertgameloop}
 Robert Nystrom.
 \newblock {\em Game Programming Patterns}.
-\newblock 1 edi\c{c}\~{a}o, 2014.
+\newblock Primeira edi\c{c}\~{a}o, 2014.
 
 \bibitem[Sch08]{jessegamedesign}
 Jesse Schell.
 \newblock {\em The Art of Game Design: A Book of Lenses}.
-\newblock 1 edi\c{c}\~{a}o, 2008.
+\newblock Primeira edi\c{c}\~{a}o, 2008.
 
 \end{thebibliography}
