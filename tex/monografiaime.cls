@@ -300,17 +300,17 @@
         \end{visorcapa}
 
         \vskip 2cm
-        \Large{%
-            \csuse{monoime@tipotrabalhoapresentado}\\[-0.5em]
-            ao\\[-0.5em]
-            Instituto de Matemática e Estatística\\[-0.5em]
-            da\\[-0.5em]
-            Universidade de São Paulo\\[-0.5em]
-            para\\[-0.5em]
-            \csuse{monoime@objetivotrabalho}\\[-0.5em]
-            de\\[-0.5em]
-            \csuse{monoime@alvotrabalho} em \csuse{monoime@programa}
-        }
+      %  \Large{%
+        %    \csuse{monoime@tipotrabalhoapresentado}\\[-0.5em]
+        %    ao\\[-0.5em]
+          %  Instituto de Matemática e Estatística\\[-0.5em]
+          %  da\\[-0.5em]
+        %    Universidade de São Paulo\\[-0.5em]
+        %    para\\[-0.5em]
+        %    \csuse{monoime@objetivotrabalho}\\[-0.5em]
+        %    de\\[-0.5em]
+        %    \csuse{monoime@alvotrabalho} em \csuse{monoime@programa}
+      %  }
 
         \vskip 2cm
         \large{%
@@ -386,7 +386,7 @@
     \begin{flushright}
         Esta é a versão original da \MakeLowercase{\csuse{monoime@tipotrabalho}}
         elaborada pelo\\
-        candidato \csuse{monoime@nomealuno}, tal como \\
+        aluno \csuse{monoime@nomealuno}, tal como \\
         submetida à Comissão Julgadora.
     \end{flushright}
     \restoregeometry
