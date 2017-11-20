@@ -3,12 +3,14 @@
 \bibitem[Ada10]{ernestgamedesign}
 Ernest Adams.
 \newblock {\em Fundamentals of Game Design}.
-\newblock Segunda edi\c{c}\~{a}o, 2010.
+\newblock Number ISBN-10: 0321929675 ISBN-13: 978-0321929679. Segunda
+  edi\c{c}\~{a}o, Janeiro 2010.
 
 \bibitem[Ber14]{kleberkanban}
 Kleber Bernardo.
 \newblock Kanban: Do início ao fim!
-\newblock https://www.culturaagil.com.br/kanban-do-inicio-ao-fim/, 2014.
+\newblock https://www.culturaagil.com.br/kanban-do-inicio-ao-fim/, Dezembro
+  2014.
 
 \bibitem[ePP12]{martinpetri}
 Martin~Jonasson e~Petri~Purho.
@@ -18,11 +20,13 @@ Martin~Jonasson e~Petri~Purho.
 \bibitem[Nys14]{robertgameloop}
 Robert Nystrom.
 \newblock {\em Game Programming Patterns}.
-\newblock Primeira edi\c{c}\~{a}o, 2014.
+\newblock Number ISBN-10: 0990582906 ISBN-13: 978-0990582908. Primeira
+  edi\c{c}\~{a}o, Setembro 2014.
 
 \bibitem[Sch08]{jessegamedesign}
 Jesse Schell.
 \newblock {\em The Art of Game Design: A Book of Lenses}.
-\newblock Primeira edi\c{c}\~{a}o, 2008.
+\newblock Number ISBN-10: 0123694965 ISBN-13: 978-0123694966. Primeira
+  edi\c{c}\~{a}o, Agosto 2008.
 
 \end{thebibliography}

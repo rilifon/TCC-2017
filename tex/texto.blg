@@ -3,48 +3,54 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: texto.aux
 The style file: alpha-ime.bst
 Database file #1: bibliografia.bib
+Warning--can't use both author and editor fields in ernestgamedesign
+Warning--there's a number but no series in ernestgamedesign
 Warning--empty publisher in ernestgamedesign
+Warning--can't use both author and editor fields in robertgameloop
+Warning--there's a number but no series in robertgameloop
 Warning--empty publisher in robertgameloop
+Warning--can't use both author and editor fields in jessegamedesign
+Warning--there's a number but no series in jessegamedesign
 Warning--empty publisher in jessegamedesign
 You've used 5 entries,
             2543 wiz_defined-function locations,
-            582 strings with 4931 characters,
-and the built_in function-call counts, 1395 in all, are:
-= -- 124
+            589 strings with 5135 characters,
+and the built_in function-call counts, 1484 in all, are:
+= -- 139
 > -- 40
-< -- 5
+< -- 8
 + -- 11
 - -- 10
-* -- 75
-:= -- 235
-add.period$ -- 15
+* -- 104
+:= -- 244
+add.period$ -- 18
 call.type$ -- 5
 change.case$ -- 25
 chr.to.int$ -- 5
-cite$ -- 8
+cite$ -- 14
 duplicate$ -- 70
 empty$ -- 126
 format.name$ -- 19
-if$ -- 284
+if$ -- 302
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 6
 newline$ -- 28
 num.names$ -- 15
-pop$ -- 44
+pop$ -- 35
 preamble$ -- 1
 purify$ -- 30
 quote$ -- 0
-skip$ -- 52
+skip$ -- 49
 stack$ -- 0
 substring$ -- 36
-swap$ -- 5
-text.length$ -- 5
+swap$ -- 11
+text.length$ -- 8
 text.prefix$ -- 4
 top$ -- 0
 type$ -- 28
-warning$ -- 3
+warning$ -- 9
 while$ -- 10
 width$ -- 8
-write$ -- 62
-(There were 3 warnings)
+write$ -- 65
+(There were 9 warnings)
