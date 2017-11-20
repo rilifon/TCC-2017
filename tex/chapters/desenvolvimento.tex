@@ -59,11 +59,13 @@ Para atingir tal efeito criamos dois scripts de \textit{shader}, um que aplica u
 \section{Juiceness}
 \label{sec:juiceness}
 
-Além desses efeitos com shaders, um grande foco no desenvolvimento do \textit{PsyChO: The Ball} foi gasto em deixar o jogo mais \textit{juicy}. Isso é realizado com vários efeitos pequenos mas que tentam melhorar a experiência do jogador.
+Além desses efeitos com shaders, um grande foco no desenvolvimento do \textit{PsyChO: The Ball} foi gasto em deixar o jogo mais \textit{juicy}. Isso é realizado com vários efeitos pequenos mas que tentam melhorar a experiência do jogador. \textit{Juicy} vem do termo \textit{Juiciness}, termo criado por desenvolvedores de jogos Martin Jonasson e Petri Purho em uma palestra sobre Game Design\cite{martinpetri}. Nela eles definem \textit{Juiciness} como uma recompensa ou fortalecimento de uma experiencia dado alguma ação do usuário, geralmente transmitida por efeitos especiais tais como explosões, tremer a tela ou até mesmo efeitos sonoros.
+
+Além disso é considerado uma um efeito \textit{Juicy} a utilização de interpolações e transições em vez de mudanças brutas de valores. Por exemplo, é esperado que o jogador tenha uma melhor experiência de movimento se o personagem principal gradativamente acelerar sua velocidade até um valor máximo ao contrário de chegar nesse valor instantaneamente ao apertar um botão.
 
 Quase todas transições do jogo são feitas com alguma interpolação em vez de instantâneas. Um bom exemplo disso é a movimentação do personagem principal, \textit{Psycho}. Em vez de ele ter uma velocidade constante quando se move, o Psycho tem uma leve aceleração quando começa seu movimento, e um leve desaceleração quando o jogador solta o comando de andar. Isso cria uma ilusão de movimento muito mais realística e agradável pro jogador em contraposto a uma velocidade que se inicia e acaba instantaneamente.
 
-Outro efeito implementado no jogo para aumentar a \textit{juiceness} é a explosão de partículas toda vez que um inimigo morre. Vários pequenos circulos de tamanho e velocidade variada explodem assim que um inimigo é destruído, dando mais emoção ao jogo e satisfação ao jogador.
+Outro efeito implementado no jogo para aumentar a \textit{Juiciness} é a explosão de partículas toda vez que um inimigo morre. Vários pequenos circulos de tamanho e velocidade variada explodem assim que um inimigo é destruído, dando mais emoção ao jogo e satisfação ao jogador.
 
 Como último exemplo de efeito \textit{juicy} no jogo, \textit{PsyChO: The Ball} utiliza um clássico em jogos hoje em dia: tremer a tela quando o jogador morre. Outro efeito bem simples de se implementar, já que só é preciso transladar todos elementos na tela alguns pixels para a frente e para trás, porém que gera grande impacto e imersão ao jogador.
 

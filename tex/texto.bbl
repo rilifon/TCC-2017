@@ -1,4 +1,4 @@
-\begin{thebibliography}{Ada10}
+\begin{thebibliography}{ePP12}
 
 \bibitem[Ada10]{ernestgamedesign}
 Ernest Adams.
@@ -9,6 +9,11 @@ Ernest Adams.
 Kleber Bernardo.
 \newblock Kanban: Do início ao fim!
 \newblock https://www.culturaagil.com.br/kanban-do-inicio-ao-fim/, 2014.
+
+\bibitem[ePP12]{martinpetri}
+Martin~Jonasson e~Petri~Purho.
+\newblock Juice it or lose it.
+\newblock https://www.gdcvault.com/play/1016487/Juice-It-or-Lose, 2012.
 
 \bibitem[Nys14]{robertgameloop}
 Robert Nystrom.

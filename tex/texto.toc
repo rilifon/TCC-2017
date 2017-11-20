@@ -1,7 +1,6 @@
 \select@language {brazil}
 \contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivos}{1}{section.1.2}
+\contentsline {section}{\numberline {1.1}Motiva\IeC {\c c}\IeC {\~a}o e Objetivos}{1}{section.1.1}
 \contentsline {chapter}{\numberline {2}Conceitos, T\IeC {\'e}cnicas e Ferramentas}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Conceitos}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}T\IeC {\'e}cnicas}{5}{section.2.2}
