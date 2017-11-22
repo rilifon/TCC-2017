@@ -12,45 +12,45 @@ Warning--empty publisher in robertgameloop
 Warning--can't use both author and editor fields in jessegamedesign
 Warning--there's a number but no series in jessegamedesign
 Warning--empty publisher in jessegamedesign
-You've used 5 entries,
+You've used 9 entries,
             2543 wiz_defined-function locations,
-            589 strings with 5135 characters,
-and the built_in function-call counts, 1484 in all, are:
-= -- 139
-> -- 40
-< -- 8
-+ -- 11
-- -- 10
-* -- 104
-:= -- 244
-add.period$ -- 18
-call.type$ -- 5
-change.case$ -- 25
-chr.to.int$ -- 5
-cite$ -- 14
-duplicate$ -- 70
-empty$ -- 126
-format.name$ -- 19
-if$ -- 302
+            608 strings with 5377 characters,
+and the built_in function-call counts, 2519 in all, are:
+= -- 234
+> -- 72
+< -- 12
++ -- 19
+- -- 18
+* -- 152
+:= -- 401
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 45
+chr.to.int$ -- 9
+cite$ -- 18
+duplicate$ -- 114
+empty$ -- 226
+format.name$ -- 34
+if$ -- 521
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 6
-newline$ -- 28
-num.names$ -- 15
-pop$ -- 35
+newline$ -- 45
+num.names$ -- 27
+pop$ -- 73
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 54
 quote$ -- 0
-skip$ -- 49
+skip$ -- 98
 stack$ -- 0
-substring$ -- 36
-swap$ -- 11
-text.length$ -- 8
-text.prefix$ -- 4
+substring$ -- 64
+swap$ -- 15
+text.length$ -- 12
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 28
+type$ -- 60
 warning$ -- 9
-while$ -- 10
-width$ -- 8
-write$ -- 65
+while$ -- 18
+width$ -- 11
+write$ -- 107
 (There were 9 warnings)

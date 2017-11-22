@@ -1,4 +1,4 @@
-\begin{thebibliography}{ePP12}
+\begin{thebibliography}{Gam12}
 
 \bibitem[Ada10]{ernestgamedesign}
 Ernest Adams.
@@ -12,10 +12,23 @@ Kleber Bernardo.
 \newblock https://www.culturaagil.com.br/kanban-do-inicio-ao-fim/, Dezembro
   2014.
 
+\bibitem[Cav12]{hexagon}
+Terry Cavanagh.
+\newblock Hexagon, 2012.
+
 \bibitem[ePP12]{martinpetri}
 Martin~Jonasson e~Petri~Purho.
 \newblock Juice it or lose it.
 \newblock https://www.gdcvault.com/play/1016487/Juice-It-or-Lose, 2012.
+
+\bibitem[Gam12]{hotline}
+Dennaton Games.
+\newblock Hotline miami, Outubro 2012.
+
+\bibitem[NC85]{mario}
+Limited Nintendo~Company.
+\newblock Super mario bros.
+\newblock [Nintendo Entertainment System], Setembro 1985.
 
 \bibitem[Nys14]{robertgameloop}
 Robert Nystrom.
@@ -28,5 +41,9 @@ Jesse Schell.
 \newblock {\em The Art of Game Design: A Book of Lenses}.
 \newblock Number ISBN-10: 0123694965 ISBN-13: 978-0123694966. Primeira
   edi\c{c}\~{a}o, Agosto 2008.
+
+\bibitem[ZUN96]{touhou}
+ZUN.
+\newblock Touhou project, 1996.
 
 \end{thebibliography}
