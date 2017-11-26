@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {5.1}Conte\IeC {\'u}do}{15}{section.5.1}
 \contentsline {section}{\numberline {5.2}Eventos}{16}{section.5.2}
 \contentsline {section}{\numberline {5.3}Como Jogar}{17}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es}{19}{chapter.6}
+\contentsline {chapter}{\numberline {6}Conclus\IeC {\~o}es - Parte Subjetiva}{19}{chapter.6}
 \contentsline {section}{\numberline {6.1}Gradua\IeC {\c c}\IeC {\~a}o e o Trabalho de Formatura}{19}{section.6.1}
 \contentsline {section}{\numberline {6.2}Trabalhos Futuros}{20}{section.6.2}
 \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{21}{appendix*.11}
