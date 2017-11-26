@@ -15,6 +15,7 @@ Kleber Bernardo.
 \bibitem[Cav12]{hexagon}
 Terry Cavanagh.
 \newblock Hexagon, 2012.
+\newblock http://terrycavanaghgames.com/hexagon/.
 
 \bibitem[ePP12]{martinpetri}
 Martin~Jonasson e~Petri~Purho.
@@ -24,6 +25,7 @@ Martin~Jonasson e~Petri~Purho.
 \bibitem[Gam12]{hotline}
 Dennaton Games.
 \newblock Hotline miami, Outubro 2012.
+\newblock http://www.devolverdigital.com/games/view/hotline-miami.
 
 \bibitem[NC85]{mario}
 Limited Nintendo~Company.
@@ -45,5 +47,6 @@ Jesse Schell.
 \bibitem[ZUN96]{touhou}
 ZUN.
 \newblock Touhou project, 1996.
+\newblock https://en.wikipedia.org/wiki/Touhou\_Project.
 
 \end{thebibliography}
