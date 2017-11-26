@@ -28,7 +28,7 @@
 \RequirePackage{setspace}
 
 % Indentação do primeiro parágrafo.
-%\RequirePackage{indentfirst}
+\RequirePackage{indentfirst}
 
 % Índice remissivo.
 \RequirePackage{makeidx}
