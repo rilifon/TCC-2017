@@ -3,7 +3,7 @@
 \label{cap:desenvolvimento}
 % ---------------------------------------------------------------------------- %
 
-\textit{PsyChO: The Ball} teve seu início em 2013 como \textit{PsyChObALL}. Durante os primeiros meses, o projeto servia como um meio prático de se aprender técnicas de programação e desenvolvimento de jogos e, aos poucos, foi tomando proporções maiores até ter seu primeiro lançamento em agosto de 2013. O jogo ficou em desenvolvimento até meados de 2014, mas lentamente começou a receber menos atualizações conforme seus criadores foram focando em outros projetos.
+\textit{PsyChO: The Ball} teve seu início em 2013 como \textit{PsyChObALL}. Durante os primeiros meses, o projeto servia como um meio prático de se aprender técnicas de programação e desenvolvimento de jogos e, aos poucos, foi tomando proporções maiores até ter seu primeiro lançamento em agosto de 2013. O jogo continuou em desenvolvimento até meados de 2014, mas lentamente começou a receber menos atualizações conforme seus criadores foram focando em outros projetos.
 
 Foi somente no segundo semestre de 2015 que ele ressurgiu como \textit{PsyChO: The Ball}, na disciplina \textbf{MAC0214 - Atividade Curricular em Cultura e Extensão}. O objetivo do projeto era revitalizar o \textit{PsyChObALL} original, fazendo tudo do início e utilizando todo conhecimento acumulado durante a graduação. O fim de 2016 teve como resultado um protótipo bem elaborado do jogo, com todas mecânicas originais do \textit{PsyChObALL} implementadas e melhoradas.
 
@@ -13,9 +13,9 @@ O desenvolvimento do jogo passou por várias fases. Seguem neste capítulo algum
 \section{STEAMING}
 \label{sec:steaming}
 
-Antes de começar o desenvolvimento direto do jogo, os primeiros meses foram direcionados em criar um template de jogos para o arcabouço \textit{Love2D}. Esse template se tornou o \textbf{STEAMING} (\textit{Simple TEmplAte for MakINg Games}) e todo o código do jogo foi construído em cima dele.
+Antes de começar o desenvolvimento direto de \textit{PsyChO: The Ball}, os primeiros meses foram direcionados em criar um template de jogos para o arcabouço \textit{Love2D}. Esse template se tornou o \textbf{STEAMING} (\textit{Simple TEmplAte for MakINg Games}) e todo o código do jogo foi construído em cima dele.
 
-O template possui duas características peculiares que foram vantajosas para o desenvolvimento do jogo: sua infraestrutura orientada a objetos para manipular elementos num jogo e sua estrutura de desenhar objetos na tela.
+\textbf{STEAMING} possui duas características peculiares que foram vantajosas para o desenvolvimento do jogo: sua infraestrutura orientada a objetos para manipular elementos num jogo e sua estrutura para desenhar objetos na tela.
 
 Todos os objetos no jogo foram herdados de uma classe básica chamada \textit{Element}. Um \textit{Element} pode possuir três atributos fundamentais: um tipo (chamado de \textit{type}), um subtipo (chamado de \textit{subtype}) e uma identificação única (chamada de \textit{id}). Com esses três atributos é possível agrupar, identificar, selecionar ou até mesmo destruir elementos no jogo com muita praticidade, ajudando imensamente seu desenvolvimento.
 
@@ -33,7 +33,7 @@ Todas as informações são guardadas em tabelas de Lua, que depois são transfo
 \section{Script de Fases}
 \label{sec:level_script}
 
-Para organizar o fluxo de eventos em cada nível do jogo, foi implementado um gerenciador de niveis. Assim foi possível abstrair a lógica de cada fase em \textit{scripts}.
+Para organizar o fluxo de eventos em cada nível do jogo, foi implementado um gerenciador de níveis. Assim foi possível abstrair a lógica de cada fase em \textit{scripts}.
 
 Cada \textit{script} descreve em que sequência inimigos ou ações se desenrolam em cada nível do jogo. Isso facilitou imensamente no \textit{design} dos níveis, especialmente quando foi necessário balancear o jogo, pois o \textit{script} permite editar e visualizar facilmente cada nível em poucas linhas. Vários métodos foram criados para gerar padrões específicos de inimigos, dar vidas-extras para o Psycho ou até mesmo criar chefões.
 
@@ -47,7 +47,7 @@ Para lidar com corotinas paradas, ou criar novas corotinas, vários métodos aux
 
 Uma boa descrição de \textit{PsyChO: The Ball} seria: contém muitos círculos. Logo, como este é o elemento mais característico do jogo, é desejável que os círculos sejam visualmente agradáveis.
 
-Inicialmente os círculos eram desenhados com os métodos imbutidos no arcabouço \textit{LÖVE}. Entretanto estes não utilizam nenhum algoritmo de suavização, então as bordas dos círculos ficam serrilhadas e não combinam com a estética do jogo.
+Inicialmente os círculos eram desenhados com os métodos imbutidos no arcabouço \textit{LÖVE}. Entretanto estes não utilizam nenhum algoritmo de suavização, como consequência as bordas dos círculos ficam serrilhadas e não combinam com a estética do jogo.
 
 Desta forma escrevemos um \textit{shader} que desenha círculos com bordas suavizadas (ou, como é conhecido esse efeito, \textit{anti-aliasing}). Utilizando a linguagem de \textit{shaders} da \textit{LÖVE} (muito semelhante à linguagem de \textit{shaders} do \textit{OpenGL}, \textit{GLSL}), um \textit{script} genérico consegue desenhar qualquer círculo com bordas suavizadas, dado o tamanho do seu diâmetro.
 
@@ -55,15 +55,15 @@ Além disso, o jogo precisa de outro efeito realizado por \textit{shaders}: borr
 
 Para atingir tal efeito foi criado dois \textit{scripts} de \textit{shader}, um que aplica um efeito de borrão horizontal e outro vertical. Assim, ao utilizar os dois em sequência, é possível chegar ao resultado esperado de uma tela desfocada, criando um efeito muito interessante enquanto o jogo estiver pausado.
 
+%colocar foto do blur
+
 % ---------------------------------------------------------------------------- %
 \section{Juiceness}
 \label{sec:juiceness}
 
-Além desses efeitos com \textit{shaders}, um grande foco no desenvolvimento do \textit{PsyChO: The Ball} foi gasto em deixar o jogo mais \textit{juicy}. Isso é realizado com vários efeitos pequenos mas que tentam melhorar a experiência do jogador. \textit{Juicy} vem do termo \textit{Juiciness}, criado pelos desenvolvedores de jogos Martin Jonasson e Petri Purho, em uma palestra sobre \textit{Game Design}\cite{martinpetri}. Nela eles definem \textit{Juiciness} como uma recompensa ou fortalecimento de uma experiência, dada alguma ação do usuário e geralmente transmitida por efeitos especiais, tais como explosões, tremer a tela, ou até mesmo por efeitos sonoros.
+Além desses efeitos com \textit{shaders}, um grande foco no desenvolvimento do \textit{PsyChO: The Ball} foi em deixar o jogo mais \textit{juicy}. Isso é realizado com vários efeitos pequenos mas que tentam melhorar a experiência do jogador. \textit{Juicy} vem do termo \textit{Juiciness}, criado pelos desenvolvedores de jogos Martin Jonasson e Petri Purho, em uma palestra sobre \textit{Game Design}\cite{martinpetri}. Nela eles definem \textit{Juiciness} como uma recompensa ou fortalecimento de uma experiência, dada alguma ação do usuário e geralmente transmitida por efeitos especiais, tais como explosões, tremer a tela, ou até mesmo por efeitos sonoros.
 
-Além disso, é considerado um efeito \textit{Juicy}, a utilização de interpolações e transições em vez de mudanças brutas de valores. Por exemplo, é esperado que o jogador tenha uma melhor experiência de movimento se o personagem principal gradativamente acelerar sua velocidade até um valor máximo, ao contrário de chegar nesse valor instantaneamente ao apertar um botão.
-
-Quase todas as transições do jogo são feitas com alguma interpolação, em vez de uma mudança instantânea. Um bom exemplo disso é a movimentação do personagem principal, \textit{Psycho}. Em vez dele ter uma velocidade constante quando se move, o Psycho tem uma leve aceleração quando começa seu movimento e uma leve desaceleração quando o jogador solta o comando de andar. Isso cria uma ilusão de movimento muito mais realista e agradável para o jogador em contraponto a uma velocidade que se inicia e acaba instantaneamente.
+Além disso, é considerado um efeito \textit{Juicy}, a utilização de interpolações e transições em vez de mudanças brutas de valores. Quase todas as transições do jogo são feitas desta forma. Um bom exemplo disso é a movimentação do personagem principal, \textit{Psycho}. Em vez dele ter uma velocidade constante quando se move, o Psycho tem uma leve aceleração quando começa seu movimento e uma leve desaceleração quando o jogador solta o comando de andar. Isso cria uma ilusão de movimento muito mais realista e agradável para o jogador em contraponto a uma velocidade que se inicia e acaba instantaneamente.
 
 Outro efeito implementado no jogo, para aumentar a \textit{Juiciness}, é a explosão de partículas toda vez que um inimigo morre. Vários pequenos círculos de tamanho e velocidade variados explodem assim que um inimigo é destruído, dando mais emoção ao jogo e satisfação ao jogador.
 
@@ -75,4 +75,4 @@ Como último exemplo de efeito \textit{juicy}, \textit{PsyChO: The Ball} utiliza
 
 Durante o desenvolvimento de \textit{PsyChO: The Ball} surgiram vários problemas e desafios. Para consertar \textit{bugs} ou otimizar o código foi necessário aprender a fundo a linguagem Lua, explorar bibliotecas disponíveis e até mesmo relembrar algoritmos aprendidos na graduação.
 
-Um dos desafios mais interessantes que surgiu durante o desenvolvimento do jogo foi a transição de cor dos objetos. Para manter o tema psicodélico, quase todos objetos ficam transitando entre uma tabela de cores própria. Essa transição, porém, nunca parecia natural e orgânica já que apenas era interpolados os valores \textit{RGB} de um objeto para os valores alvo. Para resolver este problema, foi utilizada a representação de cores \textit{HSL}, que representa uma cor através de sua matiz, saturação e luminosidade (traduzidos do inglês \textit{hue}, \textit{saturation} e \textit{lightness}). Com essa mudança, o jogo ficou com transições entre cores muito mais naturais e visualmente belas.
+Um dos desafios mais interessantes que surgiu foi a transição de cor dos objetos. Para manter o tema psicodélico, quase todos objetos ficam transitando entre valores de uma tabela de cores própria. Essa transição, porém, nunca parecia natural e orgânica já que apenas era interpolados os valores \textit{RGB} de um objeto para os valores alvo. Para resolver este problema, foi utilizada a representação de cores \textit{HSL}, que representa uma cor através de sua matiz, saturação e luminosidade (traduzidos do inglês \textit{hue}, \textit{saturation} e \textit{lightness}). Com essa mudança, o jogo ficou com transições entre cores muito mais naturais e visualmente belas.
