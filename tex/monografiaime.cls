@@ -44,6 +44,14 @@
 
 % Para formatar código-fonte (ex. em Java).
 \RequirePackage{listings}
+% Para enquadrar código-fonte
+\lstset{
+numbers=left,
+numberstyle=\small,
+numbersep=8pt,
+frame=single,
+framexleftmargin=15pt}
+}
 
 % Habilita o uso de matrix.
 \RequirePackage{amsmath}

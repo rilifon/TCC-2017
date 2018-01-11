@@ -75,4 +75,59 @@ Como último exemplo de efeito \textit{juicy}, \textit{PsyChO: The Ball} utiliza
 
 Durante o desenvolvimento de \textit{PsyChO: The Ball} surgiram vários problemas e desafios. Para consertar \textit{bugs} ou otimizar o código foi necessário aprender a fundo a linguagem Lua, explorar bibliotecas disponíveis e até mesmo relembrar algoritmos aprendidos no curso.
 
-Um dos desafios mais interessantes que surgiu foi a transição de cor dos objetos. Para manter o tema psicodélico, quase todos objetos ficam transitando entre valores de uma tabela de cores própria. Essa transição, porém, nunca parecia natural e orgânica já que apenas eram interpolados os valores \textit{RGB} de um objeto para os valores alvo. Para resolver este problema, foi utilizada a representação de cores \textit{HSL}, que representa uma cor através de sua matiz, saturação e luminosidade (traduzidos do inglês \textit{hue}, \textit{saturation} e \textit{lightness}). Com essa mudança, o jogo ficou com transições entre cores muito mais naturais e visualmente belas.
+Um dos desafios mais interessantes que surgiu foi a transição de cor dos objetos. Para manter o tema psicodélico, quase todos objetos ficam transitando entre valores de uma tabela de cores própria. Essa transição, porém, nunca parecia natural e orgânica já que apenas eram interpolados os valores \textit{RGB} de um objeto para os valores alvo, resultando em cores intermediárias \textit{amarronzadas}. Para resolver este problema, foi utilizada a representação de cores \textit{HSL}, que representa uma cor através de sua matiz, saturação e luminosidade (traduzidos do inglês \textit{hue}, \textit{saturation} e \textit{lightness}).
+
+\begin{figure}[h!]
+\includegraphics[scale=.3]{color_transitions}
+\centering
+\caption{Diferença visual de transições usando representação RGB e HSL}
+\end{figure}
+
+Com essa mudança, o jogo ficou com transições entre cores muito mais naturais e visualmente belas, se encaixando melhor na temática psicodélica.
+
+A utilização de HSL foi bem direta no programa. Em todos lugares que se tratava de cor, foi utilizado diretamente valores HSL. Somente na hora de desenhar objetos na tela que se faz a transição do valor HSL para RGB (representação utilizada pela função de definir cores no arcabouço \textit{LÖVE}).
+
+A função de converter valores HSL (com todos valores normalizados entre 0 e 255) para RGB é bem simples, baseada na própria geração de cores de RGB para HSL:
+
+\begin{lstlisting}[language={[5.0]lua}]
+--Recebe valores de 'h', 's', 'l' (todos no intervalo [0,255]) e retorna
+--valores correspondentes de 'r', 'g' e 'b' (tambem no intervalo [0,255]).
+function convertHSLtoRGB(h, s, l)
+	if s<=0 then return l,l,l end
+
+	h, s, l = h/256*6, s/255, l/255
+
+	local c = (1-math.abs(2*l-1))*s
+	local x = (1-math.abs(h%2-1))*c
+	local m,r,g,b = (l-.5*c), 0,0,0
+
+	if h < 1     then
+		r,g,b = c,x,0
+	elseif h < 2 then
+	 	r,g,b = x,c,0
+	elseif h < 3 then
+	 	r,g,b = 0,c,x
+	elseif h < 4 then
+	 	r,g,b = 0,x,c
+	elseif h < 5 then
+	 	r,g,b = x,0,c
+	else
+	 	r,g,b = c,0,x
+	end
+
+	return (r+m)*255,(g+m)*255,(b+m)*255
+end
+\end{lstlisting}
+
+Por último, como nossa função recebe valores nos intervalos [0,255] e normalmente a matiz, saturação e luminosidade são dadas em graus, porcentagem e porcentagem respectivamente, foi criado uma função que faz essa transformação:
+
+\begin{lstlisting}[language={[5.0]lua}]
+--Converte os valores HSL em [graus, porcentagem, porcentagem)
+--para o intervalo [0-255]
+function HSLtoStandardValues(h,s,l)
+  local sh = h*255/360
+  local ss = s*255/100
+  local sl = l*255/100
+  return sh, ss, sl
+end
+\end{lstlisting}
