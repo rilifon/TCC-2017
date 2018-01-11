@@ -49,7 +49,28 @@ Uma boa descrição de \textit{PsyChO: The Ball} seria: contém muitos círculos
 
 Inicialmente os círculos eram desenhados com os métodos imbutidos no arcabouço \textit{LÖVE}. Entretanto estes não utilizam nenhum algoritmo de suavização, como consequência as bordas dos círculos ficam serrilhadas e não combinam com a estética do jogo.
 
-Desta forma escrevemos um \textit{shader} que desenha círculos com bordas suavizadas (ou, como é conhecido esse efeito, \textit{anti-aliasing}). Utilizando a linguagem de \textit{shaders} da \textit{LÖVE} (muito semelhante à linguagem de \textit{shaders} do \textit{OpenGL}, \textit{GLSL}), um \textit{script} genérico consegue desenhar qualquer círculo com bordas suavizadas, dado o tamanho do seu diâmetro.
+\begin{figure}[h!]
+\includegraphics[scale=.3]{anti-aliasing}
+\centering
+\caption{Na esquerda um círculo sem anti-aliasing. Na direita um circulo com anti-aliasing.}
+\end{figure}
+
+Desta forma escrevemos um \textit{shader} que desenha círculos com bordas suavizadas (ou, como é conhecido esse efeito, \textit{anti-aliasing}). Utilizando a linguagem de \textit{shaders} da \textit{LÖVE} (muito semelhante à linguagem de \textit{shaders} do \textit{OpenGL}, \textit{GLSL}), um \textit{script} genérico consegue desenhar qualquer círculo com bordas suavizadas, dado o tamanho do seu diâmetro:
+
+\begin{lstlisting}[language=java]
+vec4 effect(vec4 color,Image text,vec2 text_coords,vec2 scrn_coords){
+  vec4 pixel = Texel(text, text_coords); //This is the current pixel color
+  vec2 center = vec2(0.5,0.5); //Center of the image
+  pixel.a = 1 - smoothstep(.5 - 1/%f, .5, distance(center, text_coords));
+  return pixel * color;
+}
+\end{lstlisting}
+
+A primeira linha de nosso código define a função que criará o efeito desejado. Ela recebe como argumento a cor atual definida pela \textit{LÖVE}, a textura da imagem a ser desenhada, as coordenadas do atual pixel na imagem (normalizada no intervalo [0,1]) e as coordenadas do pixel em relação à tela. A segunda linha vai pegar a cor atual do pixel que estamos rodando a função,
+enquanto a terceira linha define uma variável para representar o centro da imagem.
+
+A linha 4 vai criar nosso efeito de anti-aliasing. Enviando o diâmetro do círculo para subsituir o \textit{\%f}, utilizamos a função \textit{smoothstep} que vai fazer interpolação da transparência em pixels que estão na borda de nosso círculo. Essa função vai retornar 0 caso o pixel esteja dentro do raio do círculo, e 1 caso esteja fora. Entretanto, se a posição estiver no intervalo de 1 pixel desse raio (e a distância de 1 pixel é determinada pela divisão 1/diâmetro do círculo, para receber o valor normalizado do mesmo), a função vai retornar um valor correspondente entre 0 e 1. Subtraindo de 1 o resultado teremos o valor de transparência (ou \textit{alpha}) de nosso pixel, assim chegando no resultado esperado.\\
+
 
 Além disso, o jogo precisa de outro efeito realizado por \textit{shaders}: borrar a tela, denominado \textit{blur}. Esse efeito acontece quando o jogador pausa o jogo, de forma que somente a interface da tela de pausa fique nítida, enquanto todos outros elementos do jogo fiquem desfocados como se estivessem borrados.
 
