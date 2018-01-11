@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.31)  27 NOV 2017 11:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.31)  11 JAN 2018 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1666,11 +1666,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
 Here is how much of TeX's memory you used:
  15535 strings out of 493304
  222930 string characters out of 6139871
- 471595 words of memory out of 5000000
+ 471550 words of memory out of 5000000
  18587 multiletter control sequences out of 15000+600000
  22286 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 43i,12n,45p,1155b,993s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,45p,1156b,993s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
 fonts/type1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/c
 m-super/sfbx0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb
@@ -1684,7 +1684,7 @@ super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb><
 ts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on texto.pdf (31 pages, 9466364 bytes).
+Output written on texto.pdf (31 pages, 9466286 bytes).
 PDF statistics:
  433 PDF objects out of 1000 (max. 8388607)
  373 compressed objects within 4 object streams

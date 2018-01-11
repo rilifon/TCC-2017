@@ -386,8 +386,7 @@
     \begin{flushright}
         Esta é a versão original da \MakeLowercase{\csuse{monoime@tipotrabalho}}
         elaborada pelo\\
-        aluno \csuse{monoime@nomealuno}, tal como \\
-        submetida à Comissão Julgadora.
+        aluno \csuse{monoime@nomealuno}\\
     \end{flushright}
     \restoregeometry
 }
