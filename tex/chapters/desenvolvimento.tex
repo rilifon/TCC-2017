@@ -74,6 +74,12 @@ A linha 4 vai criar nosso efeito de anti-aliasing. Enviando o diâmetro do círc
 
 Além disso, o jogo precisa de outro efeito realizado por \textit{shaders}: borrar a tela, denominado \textit{blur}. Esse efeito acontece quando o jogador pausa o jogo, de forma que somente a interface da tela de pausa fique nítida, enquanto todos outros elementos do jogo fiquem desfocados como se estivessem borrados.
 
+\begin{figure}[h]
+\includegraphics[scale=.5]{blur-ingame}
+\centering
+\caption{Na esquerda uma tela de jogo sem efeito de \textit{blur}. Na direita efeito de \textit{blur} aplicado.}
+\end{figure}
+
 Para atingir tal efeito foi criado dois \textit{scripts} de \textit{shader}, um que aplica um efeito de borrão horizontal e outro vertical. Assim, ao utilizar os dois em sequência, é possível chegar ao resultado esperado de uma tela desfocada, criando um efeito muito interessante enquanto o jogo estiver pausado.
 
 %colocar foto do blur
