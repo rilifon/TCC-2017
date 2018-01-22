@@ -82,7 +82,50 @@ Além disso, o jogo precisa de outro efeito realizado por \textit{shaders}: borr
 
 Para atingir tal efeito foi criado dois \textit{scripts} de \textit{shader}, um que aplica um efeito de borrão horizontal e outro vertical. Assim, ao utilizar os dois em sequência, é possível chegar ao resultado esperado de uma tela desfocada, criando um efeito muito interessante enquanto o jogo estiver pausado.
 
-%colocar foto do blur
+\begin{lstlisting}[language=java]
+  extern number win_width; //1 / (comprimento da tela)
+  const float kernel[5] = float[](0.270270270, 0.1945945946, 0.1216216216,
+                                  0.0540540541, 0.0162162162);
+  vec4 effect(vec4 color, sampler2D tex, vec2 tex_coords, vec2 pos) {
+    color = texture2D(tex, tex_coords) * kernel[0];
+    for(int i = 1; i < 5; i++) {
+      color += texture2D(tex,
+            vec2(tex_coords.x + 6*i * win_width, tex_coords.y)) * kernel[i];
+      color += texture2D(tex,
+            vec2(tex_coords.x - 6*i * win_width, tex_coords.y)) * kernel[i];
+    }
+    return color;
+  }
+\end{lstlisting}
+
+Acima podemos ver o código para o shader que cria o efeito de borrão horizontal. A parte interessante consiste nas linha 2-3 e o laço das linhas 9-14. Nas linhas 2 e 3 definimos nosso \textit{kernel}, um vetor de \textit{floats} que vai ser aplicado em nosso pixel. O laço começando na linha 9 vai somar ao pixel atual porcentagens das cores dos pixels à esquerda e à direita do pixel, criando uma média das cores ao redor (horizontalmente apenas). Aplicando em cada pixel temos parte do efeito desejado.
+
+O código do \textit{shader} de desfocamento vertical é análogo ao horizontal, utilizando as cores acima e abaixo de cada pixel, e utilizando a altura da tela, em vez do comprimento para saber o tamanho vertical de um pixel:
+
+\begin{lstlisting}[language=java]
+extern number win_height; //1 / (altura da tela)
+const float kernel[5] = float[](0.270270270, 0.1945945946, 0.1216216216,
+                                0.0540540541, 0.0162162162);
+vec4 effect(vec4 color, sampler2D tex, vec2 tex_coords, vec2 pos) {
+  color = texture2D(tex, tex_coords) * kernel[0];
+  for(int i = 1; i < 5; i++) {
+    color += texture2D(tex,
+          vec2(tex_coords.x, tex_coords.y + 6*i * win_height)) * kernel[i];
+    color += texture2D(tex,
+          vec2(tex_coords.x, tex_coords.y - 6*i * win_height)) * kernel[i];
+  }
+  return color;
+}
+\end{lstlisting}
+
+Para aplicar os dois shaders na mesma imagem, utilizamos uma das ferramentas do arcabouço \textit{LOVE2D}: \textit{canvas}. Estes servem para definir telas intermediárias de renderização. Assim desenhamos primeiramente os elementos de interesse com o \textit{shader} horizontal em um canvas. Logo em seguida renderizamos esse canvas na janela principal do jogo, agora aplicando o \textit{vertical}, chegando no efeito desejado.
+
+\begin{figure}[h!]
+\includegraphics[scale=.4]{blur-effect}
+\centering
+\caption{Diferença visual da utilização e combinação dos \textit{shaders} para efeito \textit{blur}.}
+\end{figure}
+
 
 % ---------------------------------------------------------------------------- %
 \section{Juiceness}

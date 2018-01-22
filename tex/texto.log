@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.31)  11 JAN 2018 16:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.8.31)  22 JAN 2018 20:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1533,27 +1533,53 @@ File: ./images/blur-ingame.png Graphic file (type png)
 Package pdftex.def Info: ./images/blur-ingame.png used on input line 78.
 (pdftex.def)             Requested size: 450.55717pt x 167.50037pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 91.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 92.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 92.
+(babel)             in language  on input line 91.
  [13 <./images/blur-ingame.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 100.
+Overfull \hbox (0.64804pt too wide) in paragraph at lines 93--94
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
-<./images/color_transitions.png, id=311, 603.0028pt x 447.92343pt>
+
+Overfull \hbox (0.64804pt too wide) in paragraph at lines 95--96
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.67747pt too wide) in paragraph at lines 121--122
+[]\T1/cmr/m/n/10 Para apli-car os dois sha-ders na mesma ima-gem, uti-li-za-mos
+ uma das fer-ra-men-tas do ar-ca-bouço \T1/cmr/m/it/10 LOVE2D\T1/cmr/m/n/10 :
+ []
+
+<./images/blur-effect.png, id=315, 635.37375pt x 284.56313pt>
+File: ./images/blur-effect.png Graphic file (type png)
+
+<use ./images/blur-effect.png>
+Package pdftex.def Info: ./images/blur-effect.png used on input line 124.
+(pdftex.def)             Requested size: 254.14499pt x 113.82323pt.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 131.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 135.
+ [14 <./images/blur-effect.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 143.
+
+<./images/color_transitions.png, id=346, 603.0028pt x 447.92343pt>
 File: ./images/color_transitions.png Graphic file (type png)
 
 <use ./images/color_transitions.png>
-Package pdftex.def Info: ./images/color_transitions.png used on input line 108.
+Package pdftex.def Info: ./images/color_transitions.png used on input line 151.
 
 (pdftex.def)             Requested size: 180.90224pt x 134.37805pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 116.
+(babel)             in language  on input line 159.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 116.
- [14 <./images/color_transitions.png>]
+(babel)             in language  on input line 159.
+ [15 <./images/color_transitions.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -1565,26 +1591,19 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
- [15]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 2.
- [16
-
-]
+ [16]
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 11.
-<./images/ss1.png, id=365, 746.03719pt x 556.32843pt>
+<./images/ss1.png, id=396, 746.03719pt x 556.32843pt>
 File: ./images/ss1.png Graphic file (type png)
  <use ./images/ss1.png>
 Package pdftex.def Info: ./images/ss1.png used on input line 15.
 (pdftex.def)             Requested size: 223.81288pt x 166.89981pt.
 
-<./images/ss4.png, id=366, 752.8125pt x 562.35094pt>
+<./images/ss4.png, id=397, 752.8125pt x 562.35094pt>
 File: ./images/ss4.png Graphic file (type png)
  <use ./images/ss4.png>
 Package pdftex.def Info: ./images/ss4.png used on input line 23.
@@ -1597,11 +1616,13 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
-[17 <./images/ss1.png>]
+[17
+
+ <./images/ss1.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
 
-<./images/letsplay1_2.jpg, id=372, 5331.92pt x 2999.205pt>
+<./images/letsplay1_2.jpg, id=403, 5331.92pt x 2999.205pt>
 File: ./images/letsplay1_2.jpg Graphic file (type jpg)
 
 <use ./images/letsplay1_2.jpg>
@@ -1612,14 +1633,14 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 46.
  [18 <./images/ss4.png> <./images/letsplay1_2.jpg>] <./images/letsplay1_1.jpg, 
-id=379, 5331.92pt x 2999.205pt>
+id=411, 5331.92pt x 2999.205pt>
 File: ./images/letsplay1_1.jpg Graphic file (type jpg)
 
 <use ./images/letsplay1_1.jpg>
 Package pdftex.def Info: ./images/letsplay1_1.jpg used on input line 48.
 (pdftex.def)             Requested size: 319.9014pt x 179.94453pt.
 
-<./images/letsplay2.jpg, id=380, 5331.92pt x 2999.205pt>
+<./images/letsplay2.jpg, id=412, 5331.92pt x 2999.205pt>
 File: ./images/letsplay2.jpg Graphic file (type jpg)
 
 <use ./images/letsplay2.jpg>
@@ -1708,19 +1729,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
 Package rerunfilecheck Info: File `texto.out' has not changed.
-(rerunfilecheck)             Checksum: 84B92446299B8FF92EDB37C19CDB82CF;1536.
+(rerunfilecheck)             Checksum: 3440723706CB9BA88ACE7DEBF1B6F792;1536.
 Package rerunfilecheck Info: File `texto.brf' has not changed.
-(rerunfilecheck)             Checksum: F1CF23A2E3C50621471E761257B4B9FB;469.
+(rerunfilecheck)             Checksum: E3AF033D0CD1192D5B413C1CFAEF596E;469.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
- 15926 strings out of 493304
- 228551 string characters out of 6139871
- 502158 words of memory out of 5000000
- 18917 multiletter control sequences out of 15000+600000
+ 15972 strings out of 493304
+ 229233 string characters out of 6139871
+ 502220 words of memory out of 5000000
+ 18933 multiletter control sequences out of 15000+600000
  22286 words of font info for 53 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 43i,12n,45p,1156b,1254s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,45p,1156b,1898s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfbi1000.pfb></usr/share/texmf/fonts/type1/public/cm-supe
@@ -1735,10 +1756,10 @@ hare/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/typ
 e1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
 fti0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/sh
 are/texmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on texto.pdf (33 pages, 10047993 bytes).
+Output written on texto.pdf (33 pages, 10272308 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 439 compressed objects within 5 object streams
- 142 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 546 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
