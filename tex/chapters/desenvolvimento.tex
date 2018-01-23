@@ -17,9 +17,55 @@ Antes de começar o desenvolvimento direto de \textit{PsyChO: The Ball}, os prim
 
 \textbf{STEAMING} possui duas características peculiares que foram vantajosas para o desenvolvimento do jogo: sua infraestrutura orientada a objetos para manipular elementos num jogo e sua estrutura para desenhar objetos na tela.
 
-Todos os objetos no jogo foram herdados de uma classe básica chamada \textit{Element}. Um \textit{Element} pode possuir três atributos fundamentais: um tipo (chamado de \textit{type}), um subtipo (chamado de \textit{subtype}) e uma identificação única (chamada de \textit{id}). Com esses três atributos é possível agrupar, identificar, selecionar ou até mesmo destruir elementos no jogo com muita praticidade, ajudando imensamente seu desenvolvimento.
+\begin{lstlisting}[language={[5.0]lua}]
+ELEMENT = Class{
+  init = function(self) --Funcao inicializadora dessa classe
+    self.tp = nil --Tipo desse elemento
+    self.subtp = nil --Subtipo que esse elemento pertence (caso exista)
+    self.id = nil --Id desse elemento (caso exista)
+  end
+}
+\end{lstlisting}
+
+Todos os objetos no jogo foram herdados de uma classe básica chamada \textit{Element}. Um \textit{Element} pode possuir três atributos fundamentais: um tipo (chamado de \textit{type} ou \textit{tp}), um subtipo (chamado de \textit{subtype} ou \textit{subtp}) e uma identificação única (chamada de \textit{id}). Com esses três atributos é possível agrupar, identificar, selecionar ou até mesmo destruir elementos no jogo com muita praticidade, ajudando imensamente seu desenvolvimento.
+
+\begin{lstlisting}[language={[5.0]lua}]
+--Exemplo de uma classe "inimigo" que herda de ELEMENT
+INIMIGO = Class{
+  __includes = {ELEMENT}, --Classes que serao herdadas
+  init = function(self, x, y) --Funcao inicializadora dessa classe
+    ELEMENT.init(self)
+    self.tp = "Inimigo Simples"
+    self.subtp = "inimigos"
+
+    self.pos = {x, y}
+  end,
+  update = function(self,delta) --Funcao que atualiza a posicao
+    self.pos = {self.pos.x + 20*delta, self.pos.y + 20*delta}
+  end,
+  draw = function(self) --Funcao que renderiza o inimigo
+    local raio_do_circulo = 20
+    drawCircle(self.pos, raio_do_circulo)
+  end
+}
+\end{lstlisting}
 
 \textbf{STEAMING} reduz todo o \textit{pipeline gráfico} do jogo em camadas. Elementos do jogo desenháveis são atribuídos à alguma camada e a própria infraestrutura do template vai percorrer todas elas, em ordem, e desenhar os objetos dentro de cada uma, chamando o método correspondente da classe. Com essa organização é possível diagramar o \textit{design gráfico} do jogo bem mais facilmente e não se preocupar com objetos sendo desenhados na ordem certa. Entretanto, objetos na mesma camada são desenhados em uma ordem imprevisível, já que são armazenados dentro de uma \textit{tabela hash} sem ordem específica.
+
+\begin{lstlisting}[language={[5.0]lua}]
+--Exemplo de uma organizacao de camadas de renderizacao
+function render()
+    DrawTable(Layer.FUNDO) --Primeira camada a ser desenhada
+
+    DrawTable(Layer.INIMIGOS)
+
+    DrawTable(Layer.PROJETEIS)
+
+    DrawTable(Layer.PLAYER)
+
+    DrawTable(Layer.INTERFACE_USUARIO) --Ultima camada a ser desenhada
+end
+\end{lstlisting}
 
 % ---------------------------------------------------------------------------- %
 \section{Gerenciador de Saves}
