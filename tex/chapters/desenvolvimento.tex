@@ -85,7 +85,80 @@ Cada \textit{script} descreve em que sequência inimigos ou ações se desenrola
 
 Porém, para manter um ritmo durante o nível e não fazer o gerenciador rodar todas as linhas de uma vez, foi necessário usar corotinas. Elas permitem paralelizar o código e gerar múltiplos pontos de retorno para que o jogo aguarde certas condições antes de continuar o \textit{script} de um nível. Essas condições podem ser de tempo (como esperar 10 segundos antes de enviar a próxima sequência de inimigos) ou de aguardar até que não tenha um inimigo vivo na tela (utilizada, por exemplo, para esperar que o jogador destrua todos inimigos antes de avançar para o nível seguinte).
 
-Para lidar com corotinas paradas, ou criar novas corotinas, vários métodos auxiliares foram implementados, sempre com o objetivo de abstrair o máximo possível para que mesmo um não-programador consiga criar seus próprios níveis no jogo.
+\begin{lstlisting}[language={[5.0]lua}]
+--Exemplo de um script de fase
+F.single{enemy = SB,
+         x = ORIGINAL_WINDOW_WIDTH + 20,
+         y = ORIGINAL_WINDOW_HEIGHT/2,
+         dx = -1,
+         dy = 0}
+
+LM.wait(1.5)
+
+F.circle{enemy = {SB}, number = 4, radius = 610}
+
+LM.wait("noenemies")
+
+F.fromHorizontal{side = "left",
+                mode = "center",
+                number = 9,
+                enemy_x_margin = 25,
+                enemy_y_margin = 90,
+                enemy = {SB},
+                speed_m = 1.5}
+\end{lstlisting}
+
+Funções como \textit{F.single} ou \textit{F.circle} são utilizadas para criar \"formações de inimigos\". \textit{F.single} por exemplo cria um inimigo em uma dada posição, com uma direção e tipo específico. \textit{F.fromHorizontal} cria uma linha de inimigos que originam da esquerda ou direita da tela. Cada função de formação de inimigos possue vários parâmetros para customizar sua organização e atributos.\\\\\\
+
+\begin{lstlisting}[language={[5.0]lua}]
+--Da "yield" em uma corotina
+function level_manager.wait(arg)
+  coroutine.yield(arg)
+end
+\end{lstlisting}
+
+As funçoes do tipo \textit{wait} são as responsáveis por manter a sincronização do script. Elas são um encapsulamento de uma parada da corotina atual, interrompendo o script em certa linha do código, e apenas retomando após alguma condição. Essa função vai por sua vez chamar a função \textit{resume}, que vai lidar com o tipo de parada especificado pelo argumento \textit{arg}.
+
+\begin{lstlisting}[language={[5.0]lua}]
+--Versao simplificada do loop que roda o script de fases
+function level_manager.resume()
+    local arg, status
+    --Se o nivel parou, termina a corotina
+    if not COROUTINE then return end
+
+    --Continua o script, e pega proximo argumento do yield
+    status, arg = coroutine.resume(COROUTINE)
+
+    --Retorna a corotina somente quando nao tem mais inimigos
+    if arg == "noenemies" then
+        --Checa a cada .02 segundos se possue um inimigo
+        LEVEL_TIMER:every(.02,
+            function()
+                if Util.tableEmpty(SUBTP_TABLE["enemies"]) then
+                    level_manager.resume()
+                end
+            end
+        )
+
+    --Espera "arg" segundos
+    elseif type(arg) == "number" then
+        LEVEL_TIMER:after(arg, level_manager.resume)
+
+    --Retorna a corotina somente quando nao tem mais chefoes na tela
+    elseif arg == "nobosses" then
+        --Checa a cada .02 segundos se possue um chefao
+        LEVEL_TIMER:every(.02,
+            function()
+                if Util.tableEmpty(SUBTP_TABLE["bosses"]) then
+                    level_manager.resume()
+                end
+            end
+        )
+    end
+end
+\end{lstlisting}
+
+Todas essas funções fora implementadas com o objetivo de abstrair o máximo possível para que mesmo um não-programador consiga criar seus próprios níveis no jogo, sem precisar saber de detalhes técnicos como corotinas.
 
 % ---------------------------------------------------------------------------- %
 \section{Shaders}
